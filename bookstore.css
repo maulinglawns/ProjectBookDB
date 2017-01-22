@@ -1,0 +1,75 @@
+body {
+    width: 100%;
+}
+
+form {
+    width: 65%;
+}
+
+#insertBook #title input,
+#searchForm #title input,
+#updateBook #title input {
+    width: 70%;
+}
+
+/* Main link section */
+header, #menu {
+    text-align: center;
+}
+
+/* nav menu */
+#menu {
+    margin-bottom: 20px;
+    padding-bottom: 7px;
+}
+
+#menu a {
+    text-decoration: none;
+    margin-right: -2px;
+    background: yellow;
+    padding: 9px;
+}
+
+#menu a:hover {
+    background: #90EE90;
+}
+
+/* For multiple results (result.php) */
+#resultTable {
+    text-align: left;
+    border-collapse: collapse;
+}
+#resultTable td {
+    padding: 0.5em;
+}
+#resultTable tr:nth-child(even) {
+    background-color: #f2f2f2
+}
+#resultTable tr:hover td {
+    background: yellow;
+}
+
+/* Style for showing single book */
+#singleMain {
+    display: flex;
+}
+#book {
+    width: 45%;
+    border: 1px solid;
+    padding: 1em;
+    margin-right: 1em;
+}
+#book h3 {
+    margin-bottom: -0.7em;
+}
+#book p {
+    background: #ffff99;
+}
+#bookImage img {
+    width: 90%;
+}
+
+/* For insert & update */
+#price, #bookID {
+    float: left;
+} 
