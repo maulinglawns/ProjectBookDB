@@ -33,39 +33,39 @@ if (isset($_POST['dbInsert'])) {
         <form action="" id="insertBook" method="post">
             <fieldset>
                 <legend>Author</legend>
-                <input type="text" name="iAuthor" value="" />
+                <input type="text" name="Author" value="" />
             </fieldset>
             <fieldset id="title">
                 <legend>Title</legend>
-                <input type="text" name="iTitle" value="" />
+                <input type="text" name="Title" value="" />
             </fieldset>
             <fieldset>
                 <legend>Description</legend>
-                <textarea name="iDescr" rows="10" cols="60"></textarea>
+                <textarea name="Descr" rows="10" cols="60"></textarea>
             </fieldset>
             <fieldset>
                 <legend>Comment</legend>
-                <textarea name="iComm" rows="3" cols="60"></textarea>
+                <textarea name="Comm" rows="3" cols="60"></textarea>
             </fieldset>
             <fieldset id="price">
                 <legend>Price</legend>
-                <input type="text" name="iPrice" value="" />
+                <input type="text" name="Price" value="" />
             </fieldset>
             <fieldset id="bookID">
                 <legend>BookID</legend>
-                <input type="text" name="iBookID" value="" />
+                <input type="text" name="BookID" value="" />
             </fieldset>
             <fieldset id="year">
                 <legend>Year</legend>
-                <input type="text" name="iYear" value="" />
+                <input type="text" name="Year" value="" />
             </fieldset>
             <fieldset id="qty">
                 <legend>Quantity:</legend>
-                <input type="text" name="iQty" value="" />
+                <input type="text" name="Qty" value="" />
             </fieldset>
             <fieldset id="image">
                 <legend>Image</legend>
-                <input type="text" name="iImage" value="" />
+                <input type="text" name="Image" value="" />
             </fieldset>
             <input type="submit" value="Insert" name="dbInsert" />
         </form>

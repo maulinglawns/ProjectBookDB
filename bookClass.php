@@ -52,14 +52,14 @@ class BookDB
         
         // Get values from $_GET array
         $queryInit = "SELECT * FROM books";
-        $author = $conn->real_escape_string($getArr['qAuthor']);
-        $title  = $conn->real_escape_string($getArr['qTitle']);
-        $descr  = $conn->real_escape_string($getArr['qDescr']);
-        $comm   = $conn->real_escape_string($getArr['qComm']);
-        $price  = $conn->real_escape_string($getArr['qPrice']);
-        $bookID = $conn->real_escape_string($getArr['qBookID']);
-        $image  = $conn->real_escape_string($getArr['qImage']);
-        $year   = $conn->real_escape_string($getArr['qYear']);
+        $author = $conn->real_escape_string($getArr['Author']);
+        $title  = $conn->real_escape_string($getArr['Title']);
+        $descr  = $conn->real_escape_string($getArr['Descr']);
+        $comm   = $conn->real_escape_string($getArr['Comm']);
+        $price  = $conn->real_escape_string($getArr['Price']);
+        $bookID = $conn->real_escape_string($getArr['BookID']);
+        $image  = $conn->real_escape_string($getArr['Image']);
+        $year   = $conn->real_escape_string($getArr['Year']);
         
         $conn->close();
         
@@ -109,14 +109,14 @@ class BookDB
         $conn = $this->Connect();
         
         // Get values from $_POST array
-        $author = $conn->real_escape_string($postArr['iAuthor']);
-        $title  = $conn->real_escape_string($postArr['iTitle']);
-        $descr  = $conn->real_escape_string($postArr['iDescr']);
-        $comm   = $conn->real_escape_string($postArr['iComm']);
-        $price  = $conn->real_escape_string($postArr['iPrice']);
-        $bookID = $conn->real_escape_string($postArr['iBookID']);
-        $image  = $conn->real_escape_string($postArr['iImage']);
-        $year   = $conn->real_escape_string($postArr['iYear']);
+        $author = $conn->real_escape_string($postArr['Author']);
+        $title  = $conn->real_escape_string($postArr['Title']);
+        $descr  = $conn->real_escape_string($postArr['Descr']);
+        $comm   = $conn->real_escape_string($postArr['Comm']);
+        $price  = $conn->real_escape_string($postArr['Price']);
+        $bookID = $conn->real_escape_string($postArr['BookID']);
+        $image  = $conn->real_escape_string($postArr['Image']);
+        $year   = $conn->real_escape_string($postArr['Year']);
         
         $conn->close();
         
@@ -145,16 +145,16 @@ class BookDB
         $conn = $this->Connect();
         
         // Get values from $_POST array
-        $author = $conn->real_escape_string($postArr['uAuthor']);
-        $title  = $conn->real_escape_string($postArr['uTitle']);
-        $descr  = $conn->real_escape_string($postArr['uDescr']);
-        $comm   = $conn->real_escape_string($postArr['uComm']);
-        $price  = $conn->real_escape_string($postArr['uPrice']);
-        $bookID = $conn->real_escape_string($postArr['uBookID']);
-        $image  = $conn->real_escape_string($postArr['uImage']);
-        $year   = $conn->real_escape_string($postArr['uYear']);
-        $id     = $conn->real_escape_string($postArr['uUniqID']);
-        $qty    = $conn->real_escape_string($postArr['uQty']);
+        $author = $conn->real_escape_string($postArr['Author']);
+        $title  = $conn->real_escape_string($postArr['Title']);
+        $descr  = $conn->real_escape_string($postArr['Descr']);
+        $comm   = $conn->real_escape_string($postArr['Comm']);
+        $price  = $conn->real_escape_string($postArr['Price']);
+        $bookID = $conn->real_escape_string($postArr['BookID']);
+        $image  = $conn->real_escape_string($postArr['Image']);
+        $year   = $conn->real_escape_string($postArr['Year']);
+        $id     = $conn->real_escape_string($postArr['UniqID']);
+        $qty    = $conn->real_escape_string($postArr['Qty']);
         
         $conn->close();
         

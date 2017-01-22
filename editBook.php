@@ -16,7 +16,7 @@ if (isset($_GET['uniqID'])) {
 if (isset($_POST['dbUpdate'])) {
     $uQuery = $db->getUpdateQuery($_POST);
     if ($db->doSqlUpdate($uQuery) === 0) {
-        header("Location: single.php?uniqID={$_POST['uUniqID']}");
+        header("Location: single.php?uniqID={$_POST['UniqID']}");
     }
 }
 
@@ -37,42 +37,45 @@ if (isset($_POST['dbUpdate'])) {
         <form action="" id="updateBook" method="post">
             <fieldset>
                 <legend>Author</legend>
-                <input type="text" name="uAuthor" value="<?= $bookArr['auth'] ?>" />
+                <input type="text" name="Author" value="<?= $bookArr['auth'] ?>" />
             </fieldset>
             <fieldset id="title">
                 <legend>Title</legend>
-                <input type="text" name="uTitle" value="<?= $bookArr['title'] ?>" />
+                <input type="text" name="Title" value="<?= $bookArr['title'] ?>" />
             </fieldset>
             <fieldset>
                 <legend>Description</legend>
-                <textarea name="uDescr" rows="10" cols="60"><?= $bookArr['descr'] ?></textarea>
+                <textarea name="Descr" rows="10" cols="60"><?= $bookArr['descr'] ?></textarea>
             </fieldset>
             <fieldset>
                 <legend>Comment</legend>
-                <textarea name="uComm" rows="3" cols="60"><?= $bookArr['comm'] ?></textarea>
+                <textarea name="Comm" rows="3" cols="60"><?= $bookArr['comm'] ?></textarea>
             </fieldset>
             <fieldset id="price">
                 <legend>Price</legend>
-                <input type="text" name="uPrice" value="<?= $bookArr['price'] ?>" />
+                <input type="text" name="Price" value="<?= $bookArr['price'] ?>" />
             </fieldset>
             <fieldset id="bookID">
                 <legend>BookID</legend>
-                <input type="text" name="uBookID" value="<?= $bookArr['bookID'] ?>" />
+                <input type="text" name="BookID" value="<?= $bookArr['bookID'] ?>" />
             </fieldset>
             <fieldset id="year">
                 <legend>Year</legend>
-                <input type="text" name="uYear" value="<?= $bookArr['year'] ?>" />
+                <input type="text" name="Year" value="<?= $bookArr['year'] ?>" />
             </fieldset>
             <fieldset id="qty">
                 <legend>Quantity:</legend>
-                <input type="text" name="uQty" value="<?= $bookArr['qty'] ?>" />
+                <input type="text" name="Qty" value="<?= $bookArr['qty'] ?>" />
+                <button type="button" onclick="incrementQty()">+</button>
+                <button type="button" onclick="decrementQty()">-</button>
             </fieldset>
             <fieldset id="image">
                 <legend>Image</legend>
-                <input type="text" name="uImage" value="<?= $bookArr['image'] ?>" />
+                <input type="text" name="Image" value="<?= $bookArr['image'] ?>" />
             </fieldset>
-            <input type="hidden" name="uUniqID" value="<?= $bookArr['uniqID'] ?>" />
+            <input type="hidden" name="UniqID" value="<?= $bookArr['uniqID'] ?>" />
             <input type="submit" value="Save edits" name="dbUpdate" />
         </form>
+        <script type="text/javascript" src="bookstore.js"></script>
     </body>
 </html>
