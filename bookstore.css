@@ -83,3 +83,31 @@ input[type=submit] {
     display: block;
     clear: both;
 }
+
+/* Show small images in result.php */
+#resultTable img {
+    width: 20%;
+}
+
+/* Show large image whilst hovering images in result.php */
+/* Credit:
+ * http://www.websitecodetutorials.com/code/photo-galleries/css-popup-image.php
+ */ 
+.imgHover span {
+	position: absolute;
+	visibility: hidden;
+    width: 200px;
+    height: 100px;
+}
+
+#resultTable .imgHover span img {
+    width: 100%;
+    height: auto;
+}
+
+.imgHover:hover, .imgHover:hover span {
+	visibility: visible;
+	top: 60; 
+    right: 150px; 
+	z-index: 1;
+}

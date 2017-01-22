@@ -260,7 +260,7 @@ class BookDB
             if ($result->num_rows < 1) {
                 echo "<p>No records found!</p>";
             } else {
-                echo $result->num_rows . " records found";
+                //echo $result->num_rows . " records found";
                 // Show the results
                 while ($row = $result->fetch_array(MYSQLI_ASSOC)) {
                     echo "<tr>";
@@ -274,7 +274,8 @@ class BookDB
                     echo "<td>" . $row['price'] . ":-</td>";
                     // If we have an image, display 'image' in green text
                     if ($row['image']) {
-                        echo "<td><img src=\"{$row['image']}\" style=\"width: 20%;\" ></td>";
+                        echo "<td><a class=\"imgHover\" href=\"#\"><img src=\"{$row['image']}\" alt=\"book image\">
+                              <span><img src=\"{$row['image']}\" alt=\"book image\"></span></a></td>";
                     } else {
                         echo "<td><span style=\"color: red;\">No image</span></td>";
                     }
