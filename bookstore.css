@@ -73,7 +73,11 @@ header, #menu {
 /* For insert & update */
 #price, #bookID, #image, #year, #qty {
     float: left;
-} 
+}
+#price input[type=text], #bookID input[type=text], 
+#year input[type=text], #qty input[type=text] {
+    width: 80px;
+}
 /* Always keep submit button as the last element in form */
 input[type=submit] {
     display: block;

@@ -55,10 +55,6 @@ if (isset($_POST['dbInsert'])) {
                 <legend>BookID</legend>
                 <input type="text" name="iBookID" value="" />
             </fieldset>
-            <fieldset id="image">
-                <legend>Image</legend>
-                <input type="text" name="iImage" value="" />
-            </fieldset>
             <fieldset id="year">
                 <legend>Year</legend>
                 <input type="text" name="iYear" value="" />
@@ -66,6 +62,10 @@ if (isset($_POST['dbInsert'])) {
             <fieldset id="qty">
                 <legend>Quantity:</legend>
                 <input type="text" name="iQty" value="" />
+            </fieldset>
+            <fieldset id="image">
+                <legend>Image</legend>
+                <input type="text" name="iImage" value="" />
             </fieldset>
             <input type="submit" value="Insert" name="dbInsert" />
         </form>

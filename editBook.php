@@ -59,15 +59,19 @@ if (isset($_POST['dbUpdate'])) {
                 <legend>BookID</legend>
                 <input type="text" name="uBookID" value="<?= $bookArr['bookID'] ?>" />
             </fieldset>
+            <fieldset id="year">
+                <legend>Year</legend>
+                <input type="text" name="uYear" value="<?= $bookArr['year'] ?>" />
+            </fieldset>
+            <fieldset id="qty">
+                <legend>Quantity:</legend>
+                <input type="text" name="uQty" value="<?= $bookArr['qty'] ?>" />
+            </fieldset>
             <fieldset id="image">
                 <legend>Image</legend>
                 <input type="text" name="uImage" value="<?= $bookArr['image'] ?>" />
             </fieldset>
-            <fieldset id="year">
-                <legend>Year</legend>
-                <input type="text" name="uYear" value="<?= $bookArr['year'] ?>" />
-                <input type="hidden" name="uUniqID" value="<?= $bookArr['uniqID'] ?>" />
-            </fieldset>
+            <input type="hidden" name="uUniqID" value="<?= $bookArr['uniqID'] ?>" />
             <input type="submit" value="Save edits" name="dbUpdate" />
         </form>
     </body>

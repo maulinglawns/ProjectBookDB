@@ -154,13 +154,15 @@ class BookDB
         $image  = $conn->real_escape_string($postArr['uImage']);
         $year   = $conn->real_escape_string($postArr['uYear']);
         $id     = $conn->real_escape_string($postArr['uUniqID']);
+        $qty    = $conn->real_escape_string($postArr['uQty']);
         
         $conn->close();
         
         // Create update query
         $query = "UPDATE books 
                   SET auth='$author', title='$title', descr='$descr', comm='$comm',
-                  price='$price', bookID='$bookID', image='$image', year='$year'
+                  price='$price', bookID='$bookID', image='$image', year='$year', 
+                  qty='$qty'
                   WHERE uniqID=$id";
         
         return $query;

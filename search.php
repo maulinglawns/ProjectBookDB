@@ -38,13 +38,13 @@ require_once("htmlVars.php");
                 <legend>BookID</legend>
                 <input type="text" name="qBookID" value="" />
             </fieldset>
-            <fieldset id="image">
-                <legend>Image</legend>
-                <input type="text" name="qImage" value="" />
-            </fieldset>
             <fieldset id="year">
                 <legend>Year</legend>
                 <input type="text" name="qYear" value="" />
+            </fieldset>
+            <fieldset id="image">
+                <legend>Image</legend>
+                <input type="text" name="qImage" value="" />
             </fieldset>
             <input type="submit" value="Send" name="dbQuery" >
         </form>
