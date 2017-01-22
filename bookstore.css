@@ -20,14 +20,15 @@ header, #menu {
 /* nav menu */
 #menu {
     margin-bottom: 20px;
-    padding-bottom: 7px;
+    padding: 10px;
+    background: black;
 }
 
 #menu a {
     text-decoration: none;
-    margin-right: -2px;
+    margin-right: -3px;
     background: yellow;
-    padding: 9px;
+    padding: 10px;
 }
 
 #menu a:hover {
@@ -70,6 +71,11 @@ header, #menu {
 }
 
 /* For insert & update */
-#price, #bookID {
+#price, #bookID, #image, #year, #qty {
     float: left;
 } 
+/* Always keep submit button as the last element in form */
+input[type=submit] {
+    display: block;
+    clear: both;
+}

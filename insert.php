@@ -63,6 +63,10 @@ if (isset($_POST['dbInsert'])) {
                 <legend>Year</legend>
                 <input type="text" name="iYear" value="" />
             </fieldset>
+            <fieldset id="qty">
+                <legend>Quantity:</legend>
+                <input type="text" name="iQty" value="" />
+            </fieldset>
             <input type="submit" value="Insert" name="dbInsert" />
         </form>
     </body>
