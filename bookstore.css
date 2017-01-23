@@ -71,7 +71,17 @@ header, #menu {
 #bookImage img {
     width: 90%;
 }
-
+#details {
+    background: #ff6666;
+    visibility: hidden;
+    width: 45%;
+    border: 1px solid;
+    padding: 1em;
+}
+.detailData {
+    font-family: monospace;
+    font-size: 1.5em;
+}
 /* For insert & update */
 #price, #bookID, #image, #year, #qty {
     float: left;

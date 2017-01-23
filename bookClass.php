@@ -3,16 +3,16 @@
 class BookDB
 {
     //// Private vars for the database
-    //private $db_host = "localhost";
-    //private $db_user = "bookuser";
-    //private $db_pass = "lövblås";
-    //private $db_base = "bookstore";
+    private $db_host = "localhost";
+    private $db_user = "bookuser";
+    private $db_pass = "lövblås";
+    private $db_base = "bookstore";
     
     //// Uncomment these for use with XAMPP
-    private $db_host = "localhost";
-    private $db_user = "root";
-    private $db_pass = "";
-    private $db_base = "bookstore";
+    //private $db_host = "localhost";
+    //private $db_user = "root";
+    //private $db_pass = "";
+    //private $db_base = "bookstore";
     
     protected function Connect()
     {

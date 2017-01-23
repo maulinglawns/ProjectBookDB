@@ -44,6 +44,7 @@ if (isset($_GET['uniqID'])) {
                 <p><?= $bookArr['year'] ?></p>
                 <button onclick="location.href='editBook.php?uniqID=<?= $uniqID ?>'" type="button">
                 Edit book</button>
+                <button type="button" onclick="showHide()">Show/hide details</button>
             </section>
             <section id="bookImage">
                 <?php
@@ -55,5 +56,9 @@ if (isset($_GET['uniqID'])) {
                 ?>
             </section>
         </section>
+        <section id="details">
+            <h4>Quantity: <span class="detailData"><?= $bookArr['qty'] ?></span></h4>
+        </section>
+        <script type="text/javascript" src="bookstore.js"></script>
     </body>
 </html>
