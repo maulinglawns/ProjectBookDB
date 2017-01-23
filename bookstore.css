@@ -20,15 +20,17 @@ header, #menu {
 /* nav menu */
 #menu {
     margin-bottom: 20px;
-    padding: 10px;
     background: black;
 }
 
-#menu a {
+#menu a:link {
     text-decoration: none;
-    margin-right: -3px;
+    margin-right: -2px;
+    padding: 0 8px 0 8px;
     background: yellow;
-    padding: 10px;
+    height: 41px;
+    line-height: 41px;
+    display: inline-block;
 }
 
 #menu a:hover {
@@ -86,7 +88,7 @@ input[type=submit] {
 
 /* Show small images in result.php */
 #resultTable img {
-    width: 20%;
+    width: 50px;
 }
 
 /* Show large image whilst hovering images in result.php */
@@ -96,7 +98,7 @@ input[type=submit] {
 .imgHover span {
 	position: absolute;
 	visibility: hidden;
-    width: 200px;
+    width: 150px;
     height: 100px;
 }
 
@@ -108,6 +110,6 @@ input[type=submit] {
 .imgHover:hover, .imgHover:hover span {
 	visibility: visible;
 	top: 60; 
-    right: 150px; 
+    right: 50px; 
 	z-index: 1;
 }
