@@ -3,16 +3,16 @@
 class BookDB
 {
     //// Private vars for the database
-    private $db_host = "localhost";
-    private $db_user = "bookuser";
-    private $db_pass = "lövblås";
-    private $db_base = "bookstore";
+    //private $db_host = "localhost";
+    //private $db_user = "bookuser";
+    //private $db_pass = "lövblås";
+    //private $db_base = "bookstore";
     
     //// Uncomment these for use with XAMPP
-    //private $db_host = "localhost";
-    //private $db_user = "root";
-    //private $db_pass = "";
-    //private $db_base = "bookstore";
+    private $db_host = "localhost";
+    private $db_user = "root";
+    private $db_pass = "";
+    private $db_base = "bookstore";
     
     protected function Connect()
     {
@@ -168,6 +168,31 @@ class BookDB
         return $query;
     }
     
+    public function getFreeQuery($getArr)
+    {
+        /* Get the free search query
+         * 
+         * Arguments:
+         * The search string via $_GET
+         * 
+         * Return values:
+         * The query as string
+         */
+         
+         $conn = $this->Connect();
+         
+         $freeQuery = $conn->real_escape_string($getArr['freeSearchQuery']);
+         
+         $conn->close();
+         
+         // Create full-text query
+         $query = "SELECT * FROM books
+                   WHERE MATCH (auth,title,descr)
+                   AGAINST ('{$freeQuery}*' IN BOOLEAN MODE)";
+         
+         return $query;
+     }
+    
     public function doSqlInsert($insertQuery)
     {
         /* Perform an insert query into database.
@@ -274,8 +299,7 @@ class BookDB
                     echo "<td>" . $row['price'] . ":-</td>";
                     // If we have an image, display 'image' in green text
                     if ($row['image']) {
-                        echo "<td><a class=\"imgHover\" href=\"#\"><img src=\"{$row['image']}\" alt=\"book image\">
-                              <span><img src=\"{$row['image']}\" alt=\"book image\"></span></a></td>";
+                        echo "<td><img class=\"bookImg\" src=\"{$row['image']}\" alt=\"book image\"></td>";
                     } else {
                         echo "<td><span style=\"color: red;\">No image</span></td>";
                     }

@@ -7,6 +7,9 @@ $db = new BookDB;
 if (isset($_GET['dbQuery'])) {
     $searchString = $db->getSearchQuery($_GET);
 }
+if (isset($_GET['freeSearchQuery'])) {
+    $searchString = $db->getFreeQuery($_GET);
+}
 ?>
 
 <!DOCTYPE html>

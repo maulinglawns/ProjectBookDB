@@ -8,7 +8,8 @@ form {
 
 #insertBook #title input,
 #searchForm #title input,
-#updateBook #title input {
+#updateBook #title input,
+#freeSearch #freeSQ input {
     width: 70%;
 }
 
@@ -101,25 +102,7 @@ input[type=submit] {
     width: 50px;
 }
 
-/* Show large image whilst hovering images in result.php */
-/* Credit:
- * http://www.websitecodetutorials.com/code/photo-galleries/css-popup-image.php
- */ 
-.imgHover span {
-	position: absolute;
-	visibility: hidden;
-    width: 150px;
-    height: 100px;
-}
-
-#resultTable .imgHover span img {
-    width: 100%;
-    height: auto;
-}
-
-.imgHover:hover, .imgHover:hover span {
-	visibility: visible;
-	top: 60; 
-    right: 50px; 
-	z-index: 1;
+/* Show round corners on images in result.php */
+.bookImg {
+    border-radius: 5px;
 }
